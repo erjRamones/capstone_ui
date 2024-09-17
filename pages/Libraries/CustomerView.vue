@@ -59,7 +59,7 @@
             <th class="py-3 px-6">Mortuary Coverage Start</th>
             <th class="py-3 px-6">Mortuary Coverage End</th>
             <th class="py-3 px-6">Notes</th>
-            <th class="py-3 px-6"></th>
+            <th class="py-3 px-6">Action</th>
           </tr>
         </thead>
         <tbody class="text-gray-600 divide-y">
@@ -85,6 +85,7 @@
             <td class="px-6 py-4 whitespace-nowrap">{{ item.dateLastModified }}</td>
             <td class="px-6 py-4 whitespace-nowrap">{{ item.passbookNumber }}</td>
             <td class="px-6 py-4 whitespace-nowrap">{{ item.loanCount }}</td>
+            <td class="px-6 py-4 whitespace-nowrap"></td>
             <!-- Display Mortuary Status with Color Indicator -->
             <td class="px-6 py-4 whitespace-nowrap">
               <span :class="{'bg-green-500': item.mortuaryStatus, 'bg-red-500': !item.mortuaryStatus}" class="inline-block w-3 h-3 rounded-full"></span>
@@ -200,7 +201,7 @@ function storeResponseInTableItems() {
       email: personality.email_address,
       telephoneNumber: personality.telephone_no,
       birthday: personality.birthday, // Make sure it's properly formatted
-      gender: personality.gender_code === 1 ? 'Male' : 'Female', // Example: gender_code mapping
+      gender: personality.gender_code === 1 ? 'Male': 'Female', // Example: gender_code mapping
       civilStatus: mapCivilStatus(personality.civil_status), // Map the civil_status code
       groupName: `Group ${customer.group_id}`, // Assuming group_id is like groupName
       houseStreet: personality.house_street,

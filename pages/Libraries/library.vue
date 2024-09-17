@@ -63,22 +63,22 @@
 export default {
   methods: {
     viewEmployees() {
-      console.log("Viewing Employees");
+      alert.log("Viewing Employees");
     },
     updateEmployees() {
-      console.log("Updating Employees");
+      alert.log("Updating Employees");
     },
     deleteEmployees() {
-      console.log("Deleting Employees");
+      alert.log("Deleting Employees");
     },
     viewCustomers() {
-      console.log("Viewing Customers");
+      alert.log("Viewing Customers");
     },
     updateCustomers() {
-      console.log("Updating Customers");
+      alert.log("Updating Customers");
     },
     deleteCustomers() {
-      console.log("Deleting Customers");
+      alert.log("Deleting Customers");
     }
   }
 };
